@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "api/ping.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/ping",
+      "schedule": "*/5 * * * *"
+    }
+  ]
+}
