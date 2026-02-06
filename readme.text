@@ -1,0 +1,33 @@
+┌────────────────────────────────────────────────────────────────┐
+│                    STEP-BY-STEP PROCESS                        │
+└────────────────────────────────────────────────────────────────┘
+
+STEP 1: DOWNLOAD DATA
+├── Downloads historical stock data from Yahoo Finance
+├── Gets Open, High, Low, Close, Volume
+└── Example: 4 years of daily AAPL data
+
+STEP 2: CREATE FEATURES  
+├── Calculate technical indicators:
+│   ├── SMA (Simple Moving Average)
+│   ├── EMA (Exponential Moving Average)
+│   ├── RSI (Relative Strength Index)
+│   ├── MACD (Moving Average Convergence Divergence)
+│   └── Volatility
+└── Total: 13 features per day
+
+STEP 3: CREATE SEQUENCES
+├── Take last 60 days of data
+├── Predict next day's price
+└── Sliding window approach
+
+STEP 4: TRAIN MODEL
+├── Split: 80% training, 20% testing
+├── Model learns patterns from history
+├── Adjusts weights to minimize error
+└── Saves best model to file
+
+STEP 5: PREDICT
+├── Load saved model
+├── Input: Last 60 days of data
+└── Output: Next day's predicted price
